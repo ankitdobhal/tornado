@@ -34,7 +34,7 @@ from typing import Any, Union, Dict, Tuple, List, Callable, Iterator, Optional, 
 _INITIAL_CONNECT_TIMEOUT = 0.3
 
 
-class _Connector(object):
+class _Connector:
     """A stateless implementation of the "Happy Eyeballs" algorithm.
 
     "Happy Eyeballs" is documented in RFC6555 as the recommended practice
@@ -195,7 +195,7 @@ class _Connector(object):
             stream.close()
 
 
-class TCPClient(object):
+class TCPClient:
     """A non-blocking TCP connection factory.
 
     .. versionchanged:: 5.0

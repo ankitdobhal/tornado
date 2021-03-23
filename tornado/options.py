@@ -124,7 +124,7 @@ class Error(Exception):
     pass
 
 
-class OptionParser(object):
+class OptionParser:
     """A collection of options, a dictionary with object-like access.
 
     Normally accessed via static functions in the `tornado.options` module,
@@ -490,7 +490,7 @@ class OptionParser(object):
         return _Mockable(self)
 
 
-class _Mockable(object):
+class _Mockable:
     """`mock.patch` compatible wrapper for `OptionParser`.
 
     As of ``mock`` version 1.0.1, when an object uses ``__getattr__``
@@ -520,7 +520,7 @@ class _Mockable(object):
         setattr(self._options, name, self._originals.pop(name))
 
 
-class _Option(object):
+class _Option:
     # This class could almost be made generic, but the way the types
     # interact with the multiple argument makes this tricky. (default
     # and the callback use List[T], but type is still Type[T]).

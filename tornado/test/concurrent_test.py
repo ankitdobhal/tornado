@@ -68,7 +68,7 @@ class CapError(Exception):
     pass
 
 
-class BaseCapClient(object):
+class BaseCapClient:
     def __init__(self, port):
         self.port = port
 
@@ -98,7 +98,7 @@ class GeneratorCapClient(BaseCapClient):
         raise gen.Return(self.process_response(data))
 
 
-class ClientTestMixin(object):
+class ClientTestMixin:
     client_class = None  # type: typing.Callable
 
     def setUp(self):

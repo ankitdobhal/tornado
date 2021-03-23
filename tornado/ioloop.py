@@ -807,7 +807,7 @@ class IOLoop(Configurable):
             pass
 
 
-class _Timeout(object):
+class _Timeout:
     """An IOLoop timeout, a UNIX timestamp and a callback"""
 
     # Reduce memory overhead when there are lots of pending callbacks
@@ -836,7 +836,7 @@ class _Timeout(object):
         return self.tdeadline <= other.tdeadline
 
 
-class PeriodicCallback(object):
+class PeriodicCallback:
     """Schedules the given callback to be called periodically.
 
     The callback is called every ``callback_time`` milliseconds.

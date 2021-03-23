@@ -83,7 +83,7 @@ def get_async_test_timeout() -> float:
     return 5
 
 
-class _TestMethodWrapper(object):
+class _TestMethodWrapper:
     """Wraps a test method to raise an error if it returns a value.
 
     This is mainly used to detect undecorated generators (if a test

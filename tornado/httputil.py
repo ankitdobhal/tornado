@@ -244,7 +244,7 @@ class HTTPHeaders(collections.abc.MutableMapping):
     __unicode__ = __str__
 
 
-class HTTPServerRequest(object):
+class HTTPServerRequest:
     """A single HTTP request.
 
     All attributes are type `str` unless otherwise noted.
@@ -485,7 +485,7 @@ class HTTPOutputError(Exception):
     pass
 
 
-class HTTPServerConnectionDelegate(object):
+class HTTPServerConnectionDelegate:
     """Implement this interface to handle requests from `.HTTPServer`.
 
     .. versionadded:: 4.0
@@ -514,7 +514,7 @@ class HTTPServerConnectionDelegate(object):
         pass
 
 
-class HTTPMessageDelegate(object):
+class HTTPMessageDelegate:
     """Implement this interface to handle an HTTP request or response.
 
     .. versionadded:: 4.0
@@ -560,7 +560,7 @@ class HTTPMessageDelegate(object):
         pass
 
 
-class HTTPConnection(object):
+class HTTPConnection:
     """Applications use this interface to write their responses.
 
     .. versionadded:: 4.0

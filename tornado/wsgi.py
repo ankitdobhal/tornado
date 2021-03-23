@@ -53,7 +53,7 @@ def to_wsgi_str(s: bytes) -> str:
     return s.decode("latin1")
 
 
-class WSGIContainer(object):
+class WSGIContainer:
     r"""Makes a WSGI-compatible function runnable on Tornado's HTTP server.
 
     .. warning::
